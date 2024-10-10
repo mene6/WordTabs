@@ -1,3 +1,4 @@
+import UserManagementTable from '@/Components/admin/UserManagementTable';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import { Head } from '@inertiajs/react';
 
@@ -21,6 +22,8 @@ export default function Dashboard() {
                     </div>
                 </div>
             </div>
+            <UserManagementTable />
+
         </AuthenticatedLayout>
     );
 }

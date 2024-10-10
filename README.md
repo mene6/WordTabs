@@ -22,6 +22,11 @@ php artisan serve
 php artisan db:show
 ```
 
+```sh
+# Drop Tables and Migrate
+php artisan migrate:refresh
+```
+
 ## Vite Commands
 
 The Frontend and CMS are built with React + Shadcn and Vite as built tool.

@@ -42,10 +42,17 @@ class RegisteredUserController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
+        // Check if the first user, assign Admin, otherwise assign Subscriber
+        if (User::count() === 1) {
+            $user->assignRole('Admin');
+        } else {
+            $user->assignRole('Subscriber');
+        }
+
         event(new Registered($user));
 
         Auth::login($user);
 
-        return redirect(route('dashboard', absolute: false));
+        return redirect(route('dashboard'));
     }
 }
