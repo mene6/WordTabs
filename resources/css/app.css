@@ -71,7 +71,10 @@
 }
 
 /* Resets */
-
+#app,
+body {
+    min-height: 100vh;
+}
 html {
     scrollbar-gutter: none;
 }
@@ -158,6 +161,16 @@ body::-webkit-scrollbar-button {
 
 /* Theming */
 
+a {
+    font-weight: 700;
+    text-decoration: underline;
+    transition: all 0.25s ease-in-out;
+}
+a:hover {
+    color: hsl(var(--primary));
+    transition: all 0.25s ease-in-out;
+}
+
 .grainy:before {
     content: "";
     background-color: transparent;
@@ -170,4 +183,42 @@ body::-webkit-scrollbar-button {
     position: absolute;
     width: 100%;
     height: 100%;
+}
+
+.m-lr-lg {
+    --gradient-offset: 20%;
+    --gradient-offset-end: calc(100% - var(--gradient-offset));
+    -webkit-mask-image: linear-gradient(
+        90deg,
+        transparent 0%,
+        black var(--gradient-offset),
+        black var(--gradient-offset-end),
+        transparent 100%
+    );
+    mask-image: linear-gradient(
+        90deg,
+        transparent 0%,
+        black var(--gradient-offset),
+        black var(--gradient-offset-end),
+        transparent 100%
+    );
+}
+
+.m-lr-md {
+    --gradient-offset: 10%;
+    --gradient-offset-end: calc(100% - var(--gradient-offset));
+    -webkit-mask-image: linear-gradient(
+        90deg,
+        transparent 0%,
+        black var(--gradient-offset),
+        black var(--gradient-offset-end),
+        transparent 100%
+    );
+    mask-image: linear-gradient(
+        90deg,
+        transparent 0%,
+        black var(--gradient-offset),
+        black var(--gradient-offset-end),
+        transparent 100%
+    );
 }

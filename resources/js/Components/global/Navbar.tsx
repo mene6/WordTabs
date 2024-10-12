@@ -1,6 +1,7 @@
 
 // DockViewNavbar.tsx
 import WTLogoOfficial from '@/Components/icons/logo-official-stroked';
+import { cn } from '@/lib/utils';
 import type { User } from '@/types';
 import { Link } from '@inertiajs/react';
 import { ThemeColorToggle } from '../theme/theme-color-toggle';
@@ -10,13 +11,14 @@ interface NavbarProps {
     auth: {
         user: User;
     }
+    className?: string
 }
 
-export default function Navbar({ auth }: NavbarProps) {
+export default function Navbar({ auth, className }: NavbarProps) {
 
 
     return (
-        <div className="z-50 flex justify-between items-center space-x-2 bg-background/80 backdrop-blur p-2 w-full h-full tabs-header">
+        <div className={cn("z-50 flex justify-between items-center space-x-2 bg-background/80 backdrop-blur p-2 w-full h-full tabs-header", className)}>
             <Link href="/" className='flex flex-col justify-center items-center border-input bg-background hover:bg-background-secondary p-[.45rem] border rounded-sm w-10 h-full text-accent-foreground hover:text-primary transition-all'>
                 <WTLogoOfficial width={25} height={25} strokewidth={30} />
             </Link>

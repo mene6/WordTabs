@@ -120,7 +120,7 @@ const themes = {
             },
             foreground: {
                 DEFAULT: '0 0% 10%',
-                secondary: '0 0% 100%',
+                secondary: '0 0% 70%',
                 background: '0 0% 97%',
             },
             primary: {
@@ -175,7 +175,7 @@ const themes = {
             },
             foreground: {
                 DEFAULT: '0 0% 90%',
-                secondary: '0 0% 100%',
+                secondary: '0 0% 30%',
                 background: '0 0% 10%',
             },
             primary: {
@@ -215,7 +215,7 @@ const themes = {
                 DEFAULT: '0 0% 45%',
                 foreground: '0 0% 98%',
             },
-            border: '0 0% 12%',
+            border: '0 0% 15%',
             input: '0 0% 12%',
             ring: '0 0% 40%',
             radius: '0.5rem',
