@@ -29,15 +29,12 @@ export default function Welcome({
     };
 
 
-
     return (
         <>
 
             <Head title="WordTabs - CMS" />
 
-
-
-            <div className='relative flex flex-col bg-[radial-gradient(100%_100%_at_50%_100%,hsla(var(--primary)/30%)_0%,hsla(var(--background-secondary)/30%)_75%)] bg-background-secondary w-full min-h-screen overflow-x-hidden'>
+            <div className='relative flex flex-col bg-[radial-gradient(100%_100%_at_50%_100%,hsla(var(--primary)/30%)_0%,hsla(var(--background-secondary)/30%)_75%)] bg-background-secondary w-full min-h-screen overflow-x-hidden overflow-y-hidden'>
 
                 <header className="relative flex mb-[60px]">
 
@@ -46,16 +43,19 @@ export default function Welcome({
                 </header>
 
                 <main className='space-x-0 grid grid-cols-2 min-h-[calc(100vh-120px)]'>
-                    <div className='z-10 flex flex-col justify-center items-center bg-background rounded-r-3xl overflow-hidden'>
+                    <div className='z-10 flex flex-col justify-center items-center bg-background/80 backdrop-blur-xl rounded-r-3xl overflow-hidden'>
 
                         <div className="relative flex flex-col justify-center items-start space-y-2 p-2 w-full h-full">
 
                             <div className='flex flex-col border-foreground/5 bg-foreground/5 p-2 pt-8 border rounded-2xl text-balance align-start'>
+
                                 <h1 className='mb-4 font-bold text-2xl text-foreground leading-none'>
                                     Welcome to your new <br />WordTabs project!
                                 </h1>
+
                                 <p>WordTabs combines the best of <a href="https://laravel.com" target='_blank'>Laravel</a>, <a href='https://inertiajs.com' target='_blank'>Inertia</a>, and <a href='https://reactjs.org' target='_blank'>React</a> into one install. It provides a fast and easy way to host content, with a beautiful UI built with <a href='https://ui.shadcn.com/' target='_blank'>Shadcn</a> and <a href='https://tailwindcss.com' target='_blank'>Tailwind.</a>
                                 </p>
+
                                 <div className='justify-items-stretch gap-2 grid grid-cols-6 mt-4' >
 
                                     <DivComponent className='py-8 rounded-2xl h-32'
@@ -124,7 +124,9 @@ export default function Welcome({
                                 </TileComponent>
 
                             </div>
+
                         </div>
+
                     </div>
 
                     <div className='relative flex w-full h-full'>
@@ -132,6 +134,8 @@ export default function Welcome({
                     </div>
 
                 </main>
+
+                <div className='top-1/2 left-1/2 absolute bg-primary rounded-full w-2 h-[50vh] -translate-x-1/2 -translate-y-1/2' />
 
                 <div className='opacity-100 grainy mix-blend-multiply' />
 
