@@ -1,4 +1,115 @@
 const themes = {
+    Green: {
+        light: {
+            background: {
+                DEFAULT: '0 0% 100%',
+                secondary: '0 0% 90%',
+                third: '0 0% 80%',
+                foreground: '0 0% 0%',
+            },
+            foreground: {
+                DEFAULT: '20 14.3% 4.1%',
+                secondary: '0 0% 100%',
+                background: '0 0% 100%',
+            },
+            primary: {
+                DEFAULT: '90 100% 20%',
+                foreground: '60 9.1% 97.8%',
+                background: '24.6 95% 53.1%',
+            },
+            secondary: {
+                DEFAULT: '90 80% 40%',
+                foreground: '24 9.8% 10%',
+                background: '60 4.8% 95.9%',
+            },
+            muted: {
+                DEFAULT: '60 4.8% 95.9%',
+                foreground: '25 5.3% 44.7%',
+            },
+            highlighted: {
+                DEFAULT: '142.1 70.6% 45.3%',
+                secondary: '142.1 70.6% 40%',
+            },
+            accent: {
+                DEFAULT: '60 4.8% 95.9%',
+                foreground: '24 9.8% 10%',
+            },
+            destructive: {
+                DEFAULT: '0 84.2% 60.2%',
+                foreground: '60 9.1% 97.8%',
+            },
+            card: {
+                DEFAULT: '0 0% 100%',
+                foreground: '20 14.3% 4.1%',
+            },
+            popover: {
+                DEFAULT: '0 0% 100%',
+                foreground: '20 14.3% 4.1%',
+            },
+            selectcolors: {
+                DEFAULT: '142.4 71.8% 29.2%',
+                foreground: '0 0% 98%',
+            },
+            border: '20 5.9% 90%',
+            input: '20 5.9% 90%',
+            ring: '24.6 95% 53.1%',
+            radius: '0.5rem',
+        },
+        dark: {
+            background: {
+                DEFAULT: '90 30% 4%',
+                secondary: '0 0% 10%',
+                third: '0 0% 20%',
+                foreground: '60 9.1% 97.8%',
+            },
+            foreground: {
+                DEFAULT: '90 9.1% 97.8%',
+                secondary: '0 0% 100%',
+                background: '90 14.3% 4.1%',
+            },
+            primary: {
+                DEFAULT: '90.5 90.2% 48.2%',
+                foreground: '90 9.1% 97.8%',
+                background: '90.5 90.2% 48.2%',
+            },
+            secondary: {
+                DEFAULT: '90 6.5% 15.1%',
+                foreground: '60 9.1% 97.8%',
+            },
+            accent: {
+                DEFAULT: '90 6.5% 15.1%',
+                foreground: '90 9.1% 97.8%',
+            },
+            destructive: {
+                DEFAULT: '0 72.2% 50.6%',
+                foreground: '60 9.1% 97.8%',
+            },
+            muted: {
+                DEFAULT: '12 6.5% 15.1%',
+                foreground: '24 5.4% 63.9%',
+            },
+            highlighted: {
+                DEFAULT: '20.5 70.6% 45.3%',
+                secondary: '142.1 70.6% 40%',
+            },
+            card: {
+                DEFAULT: '20 14.3% 4.1%',
+                foreground: '60 9.1% 97.8%',
+            },
+            popover: {
+                DEFAULT: '20 14.3% 4.1%',
+                foreground: '60 9.1% 97.8%',
+            },
+            selectcolors: {
+                DEFAULT: '142.4 71.8% 29.2%',
+                foreground: '0 0% 98%',
+            },
+            border: '90 6.5% 15.1%',
+            input: '90 6.5% 15.1%',
+            ring: '20.5 90.2% 48.2%',
+            radius: '0.5rem',
+        },
+    },
     Orange: {
         light: {
             background: {

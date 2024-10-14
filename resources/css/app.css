@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Theme variables for Shadcn are generated from the theme-colors.ts file */
+:root {
+    --padding: 0.75rem;
+    --padding-sm: 0.5rem;
+    --padding-md: 2rem;
+    --padding-lg: 3rem;
+    --padding-xl: 4rem;
+}
+
 @layer base {
     :root {
         --silenced: "";
@@ -103,15 +112,6 @@ html.light body[data-scroll-locked] {
     --removed-body-scroll-bar-size: 0 !important;
 }
 
-html.light ::selection {
-    background-color: hsl(var(--primary));
-    color: black;
-}
-html.dark ::selection {
-    background-color: hsl(var(--primary));
-    color: white;
-}
-
 /* Utilities */
 .stroke-linecap-round {
     stroke-linecap: round;
@@ -171,6 +171,16 @@ a:hover {
     transition: all 0.25s ease-in-out;
 }
 
+html.light ::selection {
+    background-color: hsl(var(--primary));
+    color: hsl(var(--background));
+}
+
+html.dark ::selection {
+    background-color: hsl(var(--primary));
+    color: hsl(var(--background));
+}
+
 .grainy:before {
     content: "";
     background-color: transparent;
@@ -185,6 +195,7 @@ a:hover {
     height: 100%;
 }
 
+/* Mask left/right with image mask gradient utility classes */
 .m-lr-lg {
     --gradient-offset: 20%;
     --gradient-offset-end: calc(100% - var(--gradient-offset));

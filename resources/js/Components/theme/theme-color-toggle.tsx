@@ -25,7 +25,7 @@ const availableThemeColors = [
     dark: 'bg-orange-700'
   },
   // { name: 'Red', light: 'bg-red-600', dark: 'bg-red-700' },
-  // { name: 'Green', light: 'bg-green-600', dark: 'bg-green-700' },
+  { name: 'Green', light: 'bg-green-600', dark: 'bg-green-700' },
   // { name: 'Purple', light: 'bg-purple-600', dark: 'bg-purple-500' },
 
 ]

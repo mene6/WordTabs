@@ -152,6 +152,26 @@ module.exports = {
         forms,
         addVariablesForColors,
         require("tailwindcss-animate"),
+        function ({ addUtilities }) {
+            const newUtilities = {
+                ".padding": {
+                    padding: "var(--padding)",
+                },
+                ".padding-sm": {
+                    padding: "var(--padding-sm)",
+                },
+                ".padding-md": {
+                    padding: "var(--padding-md)",
+                },
+                ".padding-lg": {
+                    padding: "var(--padding-lg)",
+                },
+                ".padding-xl": {
+                    padding: "var(--padding-xl)",
+                },
+            };
+            addUtilities(newUtilities, ["responsive"]);
+        },
         function ({ matchUtilities, theme }) {
             matchUtilities(
                 {
