@@ -15,7 +15,7 @@ import { RiTailwindCssFill } from "react-icons/ri";
 import { SiShadcnui } from "react-icons/si";
 import { TbBrandInertia, TbBrandVite } from "react-icons/tb";
 
-export default function Welcome({
+export default function Blog({
     auth,
     laravelVersion,
     phpVersion,
@@ -63,7 +63,7 @@ export default function Welcome({
                             <div className='flex flex-col border-foreground/5 bg-foreground/5 p-2 border rounded-2xl text-balance align-start'>
 
 
-                                <div className='space-y-2 bg-secondary/20 py-8 p-4 border border-border rounded-xl transition-all'>
+                                <div className='bg-secondary/20 p-4 border border-border rounded-xl transition-all'>
 
                                     <h1 className='font-bold text-2xl text-foreground leading-none'>
                                         Welcome to your <span className='text-primary'>new</span> <br /><span className='text-primary'>WordTabs</span> project!
@@ -76,7 +76,7 @@ export default function Welcome({
 
                                 {/* Stack Brand Icon List */}
 
-                                <div className='justify-items-stretch gap-2 grid grid-cols-6 mt-2' >
+                                <div className='justify-items-stretch gap-2 grid grid-cols-6 mt-4' >
 
                                     <DivComponent className='py-8 rounded-2xl h-32'
                                         variant={'iconWithHover'}>
@@ -171,7 +171,7 @@ export default function Welcome({
                 {/* Page Footer - h-58px on home footer to compensate for borders on nav and footer */}
 
                 <SubFooter
-                    className="relative bottom-0 z-[20] flex justify-center items-center bg-background/50 backdrop-blur p-2 border-t border-border w-full h-[60px]"
+                    className="relative bottom-0 z-[20] flex justify-center items-center bg-background/50 backdrop-blur p-2 border-t border-border w-full h-[58px]"
                     laravelVersion={laravelVersion}
                     phpVersion={phpVersion}
                     WordTabs={WordTabs}
