@@ -19,7 +19,7 @@ export default function Navbar({ auth, className }: NavbarProps) {
 
     return (
         <div className={cn("z-50 flex justify-between items-center space-x-2 bg-background/80 backdrop-blur p-2 w-full h-full tabs-header", className)}>
-            <Link href="/" className='flex flex-col justify-center items-center border-input bg-background hover:bg-background-secondary p-[.45rem] border rounded-sm w-10 h-full text-accent-foreground hover:text-primary transition-all'>
+            <Link href="/" className='flex flex-col justify-center items-center bg-background hover:bg-background-secondary p-[.45rem] border border-border rounded-sm w-10 h-full text-accent-foreground hover:text-primary transition-all'>
                 <WTLogoOfficial width={25} height={25} strokewidth={30} />
             </Link>
 

@@ -9,8 +9,11 @@ import { DivComponent } from '@/Components/ui/DivComponent';
 import TileComponent from '@/Components/ui/TileComponent';
 import { PageProps } from '@/types';
 import { Head } from '@inertiajs/react';
-import { Heart } from 'lucide-react';
+import { BiSolidWidget } from "react-icons/bi";
+import { DiOpensource } from "react-icons/di";
 import { FaLaravel, FaReact } from "react-icons/fa";
+import { FaUserLock } from "react-icons/fa6";
+import { MdAutoGraph } from "react-icons/md";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { SiShadcnui } from "react-icons/si";
 import { TbBrandInertia, TbBrandVite } from "react-icons/tb";
@@ -55,7 +58,8 @@ export default function Welcome({
 
                 </header>
 
-                <main className='space-x-0 grid grid-cols-2 min-h-[calc(100vh-120px)]'>
+                <main className='space-x-0 grid grid-cols-1 6xl:grid-cols-[3fr_1fr] 7xl:grid-cols-2 min-h-[calc(100vh-120px)]'>
+
                     <div className='z-10 flex flex-col justify-center items-center bg-background/80 backdrop-blur-xl rounded-r-3xl overflow-hidden'>
 
                         <div className="relative flex flex-col justify-center items-start space-y-2 w-full h-full padding-sm">
@@ -63,7 +67,7 @@ export default function Welcome({
                             <div className='flex flex-col border-foreground/5 bg-foreground/5 p-2 border rounded-2xl text-balance align-start'>
 
 
-                                <div className='space-y-2 bg-secondary/20 py-8 p-4 border border-border rounded-xl transition-all'>
+                                <div className='space-y-2 bg-secondary/20 py-4 p-4 border border-border rounded-xl transition-all'>
 
                                     <h1 className='font-bold text-2xl text-foreground leading-none'>
                                         Welcome to your <span className='text-primary'>new</span> <br /><span className='text-primary'>WordTabs</span> project!
@@ -76,7 +80,7 @@ export default function Welcome({
 
                                 {/* Stack Brand Icon List */}
 
-                                <div className='justify-items-stretch gap-2 grid grid-cols-6 mt-2' >
+                                <div className='justify-items-stretch gap-2 grid grid-cols-1 xsm:grid-cols-2 6xl:grid-cols-6 mt-2' >
 
                                     <DivComponent className='py-8 rounded-2xl h-32'
                                         variant={'iconWithHover'}>
@@ -129,24 +133,37 @@ export default function Welcome({
 
                             {/* 4 Info Squares */}
 
-                            <div className='gap-2 grid grid-cols-2 grid-rows-2 w-full h-full overflow-x-hidden'>
+                            <div className='gap-2 grid grid-cols-1 xsm:grid-cols-2 grid-rows-2 w-full h-full overflow-x-hidden'>
 
-                                <TileComponent title="Word Tabs" className='rounded rounded-tl-2xl'>
-                                    <Heart />
-                                    {/* <MonacoEditorBlade /> */}
+                                <TileComponent
+                                    title="Maximize Efficiency"
+                                    className='rounded rounded-tl-2xl'
+                                    icon={<MdAutoGraph size={32} />}>
+                                    <p>WordTabs.com integrates tabbed browsing to boost productivity.</p>
                                 </TileComponent>
 
-                                <TileComponent title="Modern CMS" className='rounded rounded-tr-2xl'>
-                                    <Heart />
+                                <TileComponent
+                                    title="Modern CMS"
+                                    className='rounded rounded-tr-2xl'
+                                    icon={<BiSolidWidget size={30} />}>
+                                    <p>A future-proof CMS combining PHP and a sleek JavaScript panel.</p>
                                 </TileComponent>
 
-                                <TileComponent title="Open Source" className='rounded'>
-                                    <Heart />
+                                <TileComponent
+                                    title="Open Source"
+                                    className='rounded'
+                                    icon={<DiOpensource size={30} />}>
+                                    <p>WordTabs.com is open-source for full customization and integration.</p>
                                 </TileComponent>
 
-                                <TileComponent title="Word Tabs" className='rounded rounded-br-2xl'>
-                                    <Heart />
+                                <TileComponent
+                                    title="Role-Based Access"
+                                    className='rounded rounded-br-2xl'
+                                    icon={<FaUserLock size={25} />}>
+                                    <p>Associate users with secure roles and permissions, full access control.</p>
                                 </TileComponent>
+
+
 
                             </div>
 

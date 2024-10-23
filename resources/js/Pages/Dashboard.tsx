@@ -1,3 +1,6 @@
+import { DashChart1 } from '@/Components/charts/dashchart1';
+import { DashChart2 } from '@/Components/charts/dashchart2';
+import { DashChart3 } from '@/Components/charts/dashchart3';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import { Head } from '@inertiajs/react';
 
@@ -5,20 +8,18 @@ export default function Dashboard() {
     return (
         <AuthenticatedLayout
             header={
-                <h2 className="font-semibold text-gray-800 text-xl leading-tight">
+                <h2>
                     Dashboard
                 </h2>
             }
         >
             <Head title="Dashboard" />
 
-            <div className="py-12">
-                <div className="mx-auto sm:px-6 lg:px-8 max-w-7xl">
-                    <div className="bg-white shadow-sm sm:rounded-lg overflow-hidden">
-                        <div className="p-6 text-gray-900">
-                            You're logged in!
-                        </div>
-                    </div>
+            <div className="flex flex-col space-y-2 padding">
+                <DashChart1 />
+                <div className='gap-2 grid grid-cols-2 m-0 w-full'>
+                    <DashChart2 />
+                    <DashChart3 />
                 </div>
             </div>
         </AuthenticatedLayout>

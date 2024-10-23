@@ -54,6 +54,22 @@ const themes = {
             input: '20 5.9% 90%',
             ring: '24.6 95% 53.1%',
             radius: '0.5rem',
+
+            'chart-1': '90 100% 20%',
+            'chart-2': '110 50% 30%',
+            'chart-3': '130 60% 40%',
+            'chart-4': '150 70% 50%',
+            'chart-5': '170 60% 60%',
+
+            'sidebar-background': 'var(--background)',
+            'sidebar-foreground': 'var(--foreground)',
+            'sidebar-primary': 'var(--primary)',
+            'sidebar-primary-foreground': 'var(--foreground)',
+            'sidebar-accent': 'var(--primary)',
+            'sidebar-accent-foreground': 'var(--foreground)',
+            'sidebar-border': 'var(--border)',
+            'sidebar-ring': 'var(--ring)',
+
         },
         dark: {
             background: {
@@ -68,7 +84,7 @@ const themes = {
                 background: '90 14.3% 4.1%',
             },
             primary: {
-                DEFAULT: '90.5 90.2% 48.2%',
+                DEFAULT: '90.5 80.2% 48.2%',
                 foreground: '90 9.1% 97.8%',
                 background: '90.5 90.2% 48.2%',
             },
@@ -108,7 +124,24 @@ const themes = {
             input: '90 6.5% 15.1%',
             ring: '20.5 90.2% 48.2%',
             radius: '0.5rem',
+
+            'chart-1': '90.5 90.2% 48.2%',
+            'chart-2': '110.5 90.2% 43.2%',
+            'chart-3': '130.5 90.2% 44.2%',
+            'chart-4': '150.5 90.2% 46.2%',
+            'chart-5': '170.5 90.2% 40.2%',
+
+            'sidebar-background': 'var(--background)',
+            'sidebar-foreground': 'var(--foreground)',
+            'sidebar-primary': 'var(--primary)',
+            'sidebar-primary-foreground': 'var(--foreground)',
+            'sidebar-accent': 'var(--primary)',
+            'sidebar-accent-foreground': 'var(--foreground)',
+            'sidebar-border': 'var(--border)',
+            'sidebar-ring': 'var(--ring)',
+
         },
+
     },
     Orange: {
         light: {
@@ -165,6 +198,22 @@ const themes = {
             input: '20 5.9% 90%',
             ring: '24.6 95% 53.1%',
             radius: '0.5rem',
+
+            'chart-1': '24.6 95% 53.1%',
+            'chart-2': '44.6 100% 43.1%',
+            'chart-3': '64.6 85% 43.1%',
+            'chart-4': '84.6 80% 43.1%',
+            'chart-5': '104.6 75% 43.1%',
+
+            'sidebar-background': 'var(--background)',
+            'sidebar-foreground': 'var(--foreground)',
+            'sidebar-primary': 'var(--primary)',
+            'sidebar-primary-foreground': 'var(--foreground)',
+            'sidebar-accent': 'var(--primary)',
+            'sidebar-accent-foreground': 'var(--foreground)',
+            'sidebar-border': 'var(--border)',
+            'sidebar-ring': 'var(--ring)',
+
         },
         dark: {
             background: {
@@ -219,6 +268,21 @@ const themes = {
             input: '12 6.5% 15.1%',
             ring: '20.5 90.2% 48.2%',
             radius: '0.5rem',
+
+            'chart-1': '20.5 90.2% 48.2%',
+            'chart-2': '40.5 90.2% 40.2%',
+            'chart-3': '60.5 90.2% 35.2%',
+            'chart-4': '80.5 90.2% 30.2%',
+            'chart-5': '100.5 90.2% 30.2%',
+
+            'sidebar-background': 'var(--background)',
+            'sidebar-foreground': 'var(--foreground)',
+            'sidebar-primary': 'var(--primary)',
+            'sidebar-primary-foreground': 'var(--foreground)',
+            'sidebar-accent': 'var(--primary)',
+            'sidebar-accent-foreground': 'var(--foreground)',
+            'sidebar-border': 'var(--border)',
+            'sidebar-ring': 'var(--ring)',
         },
     },
     Theme: {
@@ -276,6 +340,21 @@ const themes = {
             input: '0 0% 85%',
             ring: '0 0% 65%',
             radius: '0.5rem',
+
+            'chart-1': '0 0% 75%',
+            'chart-2': '0 0% 65%',
+            'chart-3': '0 0% 55%',
+            'chart-4': '0 0% 45%',
+            'chart-5': '0 0% 35%',
+
+            'sidebar-background': 'var(--background)',
+            'sidebar-foreground': 'var(--foreground)',
+            'sidebar-primary': 'var(--primary)',
+            'sidebar-primary-foreground': 'var(--foreground)',
+            'sidebar-accent': 'var(--primary)',
+            'sidebar-accent-foreground': 'var(--foreground)',
+            'sidebar-border': 'var(--border)',
+            'sidebar-ring': 'var(--ring)',
         },
         dark: {
             background: {
@@ -326,12 +405,28 @@ const themes = {
                 DEFAULT: '0 0% 45%',
                 foreground: '0 0% 98%',
             },
-            border: '0 0% 15%',
+            border: '0 0% 18%',
             input: '0 0% 12%',
             ring: '0 0% 40%',
             radius: '0.5rem',
+
+            'chart-1': '0 0% 40%',
+            'chart-2': '0 0% 50%',
+            'chart-3': '0 0% 60%',
+            'chart-4': '0 0% 70%',
+            'chart-5': '0 0% 80%',
+
+            'sidebar-background': 'var(--background)',
+            'sidebar-foreground': 'var(--foreground)',
+            'sidebar-primary': 'var(--primary)',
+            'sidebar-primary-foreground': 'var(--foreground)',
+            'sidebar-accent': 'var(--primary)',
+            'sidebar-accent-foreground': 'var(--foreground)',
+            'sidebar-border': 'var(--border)',
+            'sidebar-ring': 'var(--ring)',
         },
     },
+
 };
 
 type ThemeMode = 'light' | 'dark';

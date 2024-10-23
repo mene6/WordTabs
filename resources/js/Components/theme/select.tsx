@@ -8,6 +8,27 @@ import { cn } from '@/lib/utils'
 
 const Select = SelectPrimitive.Root
 
+type SelectSwatchProps = React.ComponentPropsWithoutRef<typeof SelectPrimitive.Root> & {
+  className?: string;
+};
+
+const SelectSwatch = ({
+  className,
+  children,
+  ...props
+}: SelectSwatchProps) => {
+  return (
+    <SelectPrimitive.Root {...props}>
+      <div className={cn(className)}>
+        {children}
+      </div>
+    </SelectPrimitive.Root>
+  );
+};
+
+SelectSwatch.displayName = 'SelectSwatch';
+
+
 const SelectGroup = SelectPrimitive.Group
 
 const SelectValue = SelectPrimitive.Value
@@ -92,6 +113,37 @@ const SelectContent = React.forwardRef<
 ))
 SelectContent.displayName = SelectPrimitive.Content.displayName
 
+
+type SelectPrimitiveSwatchPortalProps = React.ComponentPropsWithoutRef<typeof SelectPrimitive.Portal> & {
+  className?: string;
+};
+
+const SelectContentSwatch = React.forwardRef<
+  React.ElementRef<typeof SelectPrimitive.Content>,
+  React.ComponentPropsWithoutRef<typeof SelectPrimitive.Content>
+>(({ className, children, ...props }, ref) => (
+  <SelectPrimitive.Portal>
+    <SelectPrimitive.Content
+      side="top"
+      sideOffset={-40}
+      align='end'
+      ref={ref}
+      className={cn(
+        'relative z-50 max-h-96 overflow-hidden rounded-md border bg-background  text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2',
+        className,
+      )}
+      {...props}
+    >
+      <SelectScrollUpButton />
+      <SelectPrimitive.Viewport className={cn('p-1', className)}>
+        {children}
+      </SelectPrimitive.Viewport>
+      <SelectScrollDownButton />
+    </SelectPrimitive.Content>
+  </SelectPrimitive.Portal>
+))
+SelectContentSwatch.displayName = SelectPrimitive.Content.displayName
+
 const SelectLabel = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Label>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Label>
@@ -127,6 +179,30 @@ const SelectItem = React.forwardRef<
 ))
 SelectItem.displayName = SelectPrimitive.Item.displayName
 
+const SelectItemSwatch = React.forwardRef<
+  React.ElementRef<typeof SelectPrimitive.Item>,
+  React.ComponentPropsWithoutRef<typeof SelectPrimitive.Item>
+>(({ className, children, ...props }, ref) => (
+  <SelectPrimitive.Item
+    ref={ref}
+    className={cn(
+      'relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-background-secondary focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
+      className,
+    )}
+    {...props}
+  >
+    <span className="top-1/2 left-2 absolute flex justify-center items-center h-3.5 -translate-y-1/2">
+      <SelectPrimitive.ItemIndicator>
+        <Check className="w-4 h-4" />
+      </SelectPrimitive.ItemIndicator>
+    </span>
+
+    <SelectPrimitive.ItemText>{children}</SelectPrimitive.ItemText>
+  </SelectPrimitive.Item>
+))
+SelectItemSwatch.displayName = SelectPrimitive.Item.displayName
+
+
 const SelectSeparator = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Separator>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Separator>
@@ -142,13 +218,14 @@ SelectSeparator.displayName = SelectPrimitive.Separator.displayName
 export {
   Select,
   SelectContent,
+  SelectContentSwatch,
   SelectGroup,
   SelectItem,
+  SelectItemSwatch,
   SelectLabel,
   SelectScrollDownButton,
   SelectScrollUpButton,
-  SelectSeparator,
-  SelectTrigger,
+  SelectSeparator, SelectSwatch, SelectTrigger,
   SelectValue
 }
 
